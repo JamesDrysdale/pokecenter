@@ -1,0 +1,12 @@
+<h1>Pokemon Terminal</h1>
+
+<h2>Pokemon</h2>
+
+<div id="pokemon-wrapper">
+    <% @pokemon.each do |pokemon| %>
+
+    <div class="pokemon">
+        <h3><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></h3>
+    </div>
+    <% end %>
+</div>
