@@ -66,7 +66,7 @@ class Owner
     end
 
     def self.map_items(owner_data)
-        return house_data.map { |owner| Owner.new(owner) }
+        return owner_data.map { |owner| Owner.new(owner) }
     end
 
     def self.find(id)
