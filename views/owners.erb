@@ -1,6 +1,8 @@
 <h2>List of Owners</h2>
 
 <% for owner in @owners %>
-    <p>Name: <%= owner.first_name%> <%= owner.last_name %></p>
-
+    <p>Name: <%= owner.full_name %></p>
+    <p>Phone number: <%= owner.phone %></p>
+    <p>Email: <%= owner.email %></p>
+    <p>Address: <%= owner.address %></p>
 <% end %>
