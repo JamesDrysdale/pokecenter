@@ -1,10 +1,6 @@
-<h2>Pokemon</h2>
+<h2>Pokemon List</h2>
 
-<div id="pokemon-wrapper">
-    <% @pokemon.each do |pokemon| %>
-
-    <div class="pokemon">
-        <h3><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></h3>
-    </div>
-    <% end %>
-</div>
+<% for pokemon in @pokemon %>
+    <p>Name: <%= pokemon.name %></p>
+    <hr />
+<% end %>
