@@ -2,7 +2,8 @@ require_relative('../db/sql_runner.rb')
 
 class Pokemon
 
-    attr_reader(:id, :name, :date_of_birth, :type, :allergy, :affinity, :level, :owner_id)
+    attr_accessor :name, :date_of_birth, :type, :allergy, :affinity, :level, :owner_id
+    attr_reader :id
 
     def initialize( options )
         @id = options['id'].to_i if options['id']
@@ -33,7 +34,7 @@ class Pokemon
         RETURNING id"
         values = [@name, @date_of_birth, @type, @allergy, @affinity, @level, @owner_id]
         result = SqlRunner.run(sql, values)
-        id = result.first[id]
+        id = result.first['id']
         @id = id
     end
 

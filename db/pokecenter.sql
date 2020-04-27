@@ -24,11 +24,11 @@ CREATE TABLE pokemon
 (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    dob VARCHAR(255),
+    date_of_birth VARCHAR(255),
     type VARCHAR(255),
     affinity VARCHAR(255),
     level INT,
-    allergies TEXT,
+    allergy TEXT,
     owner_id INT REFERENCES owner(id)
 );
 
