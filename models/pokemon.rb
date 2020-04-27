@@ -2,7 +2,9 @@ require_relative('../db/sql_runner.rb')
 
 class Pokemon
 
-    attr_accessor :name, :date_of_birth, :type, :allergy, :affinity, :level, :owner_first_name, :owner_last_name, :phone, :email, :address
+    attr_accessor :name, :date_of_birth, :type, :allergy, 
+    :affinity, :level, :owner_first_name, :owner_last_name, 
+    :phone, :email, :address, :vet_id, :notes
     attr_reader :id
 
     def initialize( options )
@@ -18,6 +20,8 @@ class Pokemon
         @phone = options['phone']
         @email = options['email']
         @address = options['address']
+        @vet_id = options['vet_id']
+        @notes = options['notes']
         
     end
 
@@ -34,15 +38,18 @@ class Pokemon
             owner_last_name,
             phone,
             email,
-            address
-             
+            address,
+            vet_id,
+            notes
         )
         VALUES
         (
-            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11
+            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
         )
         RETURNING id"
-        values = [@name, @date_of_birth, @type, @allergy, @affinity, @level, @owner_first_name, @owner_last_name, @phone, @email, @address]
+        values = [@name, @date_of_birth, @type, @allergy, @affinity, 
+        @level, @owner_first_name, @owner_last_name, @phone, @email, 
+        @address, @vet_id, @notes]
         result = SqlRunner.run(sql, values)
         id = result.first['id']
         @id = id.to_i
@@ -52,7 +59,7 @@ class Pokemon
         sql = "UPDATE pokemon
         SET
         (
-            name,
+            name,    
             date_of_birth,
             type,
             allergy,
@@ -62,14 +69,18 @@ class Pokemon
             owner_last_name,
             phone,
             email,
-            address
-             
-        ) =
-        (
-            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11
+            address,
+            vet_id,
+            notes
         )
-        WHERE id = $12"
-        values = [@name, @date_of_birth, @type, @allergy, @affinity, @level, @owner_first_name, @owner_last_name, @phone, @email, @address]
+        VALUES
+        (
+            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
+        )
+        WHERE id = $14"
+        values = [@name, @date_of_birth, @type, @allergy, @affinity, 
+        @level, @owner_first_name, @owner_last_name, @phone, @email, 
+        @address, @vet_id, @notes]
         SqlRunner.run(sql, values)
     end
 

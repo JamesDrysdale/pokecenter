@@ -29,7 +29,9 @@ pokemon1 = Pokemon.new({
     'owner_last_name' => 'Ketchum',
     'phone' => '76665 566 666',
     'email' => 'ash.ketchum@legendarytrainers.net',
-    'address' => 'Pallet Town'
+    'address' => 'Pallet Town',
+    'vet_id' => vet1.id,
+    'notes' => '2020-04-05: Injury: Broken tailbone Treatment: Set in cast'
 })
 
 pokemon1.save

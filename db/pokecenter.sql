@@ -22,6 +22,7 @@ CREATE TABLE vets
 
 CREATE TABLE pokemon
 (
+    -- PET DETAILS
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     date_of_birth VARCHAR(255),
@@ -30,11 +31,15 @@ CREATE TABLE pokemon
     level INT,
     allergy TEXT,
     -- owner_id INT REFERENCES owners(id)
+    -- OWNER DETAILS
     owner_first_name VARCHAR(255),
     owner_last_name VARCHAR(255),
     phone VARCHAR(255),
     email VARCHAR(255) UNIQUE,
-    address TEXT
+    address TEXT,
+    -- MEDICAL DETAILS
+    vet_id INT REFERENCES vets(id),
+    notes TEXT
 );
 
 -- CREATE TABLE medical_records
