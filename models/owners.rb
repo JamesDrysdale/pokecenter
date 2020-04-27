@@ -77,5 +77,9 @@ class Owner
         owner = Owner.new(result)
         return owner
     end
+
+    def full_name
+        return "#{@first_name.capitalize} #{@last_name.capitalize}"
+      end
     
 end
