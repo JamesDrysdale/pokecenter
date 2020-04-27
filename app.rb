@@ -1,14 +1,22 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('models/pokemon')
-require_relative('models/owners')
+require_relative('models/vets')
 also_reload('/models/*')
 
-# Index - list of all pokemon
+# Index - Full register of pokemon, owner and medical details
 get '/pokemon' do
     @pokemon = Pokemon.all
     erb(:index)
 end
+
+# new
+get '/pokemon/new' do
+    erb(:new)
+end
+
+
+
 
 # # List of all owners
 # get '/owners' do
