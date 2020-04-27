@@ -1,6 +1,6 @@
 DROP TABLE medical_records;
 DROP TABLE pokemon;
-DROP TABLE owner;
+DROP TABLE owners;
 DROP TABLE vet;
 
 
@@ -10,7 +10,7 @@ CREATE TABLE vet
     name VARCHAR(255)
 );
 
-CREATE TABLE owner 
+CREATE TABLE owners 
 (
     id SERIAL PRIMARY KEY,
     first_name VARCHAR(255),
@@ -29,7 +29,7 @@ CREATE TABLE pokemon
     affinity VARCHAR(255),
     level INT,
     allergy TEXT,
-    owner_id INT REFERENCES owner(id)
+    owner_id INT REFERENCES owners(id)
 );
 
 CREATE TABLE medical_records

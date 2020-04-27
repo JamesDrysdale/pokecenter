@@ -35,7 +35,7 @@ class Pokemon
         values = [@name, @date_of_birth, @type, @allergy, @affinity, @level, @owner_id]
         result = SqlRunner.run(sql, values)
         id = result.first['id']
-        @id = id
+        @id = id.to_i
     end
 
     def update()
