@@ -10,15 +10,15 @@ CREATE TABLE vet
     name VARCHAR(255)
 );
 
-CREATE TABLE owners 
-(
-    id SERIAL PRIMARY KEY,
-    first_name VARCHAR(255),
-    last_name VARCHAR(255),
-    phone VARCHAR(255),
-    email VARCHAR(255) UNIQUE,
-    address TEXT
-);
+-- CREATE TABLE owners 
+-- (
+--     id SERIAL PRIMARY KEY,
+--     first_name VARCHAR(255),
+--     last_name VARCHAR(255),
+--     phone VARCHAR(255),
+--     email VARCHAR(255) UNIQUE,
+--     address TEXT
+-- );
 
 CREATE TABLE pokemon
 (
@@ -29,7 +29,12 @@ CREATE TABLE pokemon
     affinity VARCHAR(255),
     level INT,
     allergy TEXT,
-    owner_id INT REFERENCES owners(id)
+    -- owner_id INT REFERENCES owners(id)
+    owner_first_name VARCHAR(255),
+    owner_last_name VARCHAR(255),
+    phone VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    address TEXT
 );
 
 CREATE TABLE medical_records
