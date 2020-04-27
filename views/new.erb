@@ -3,8 +3,46 @@
 <form method="POST" action="/pokemon">
 
     <h3>Pokemon Details</h3>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name"/>
 
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name"/><br/>
+
+    <label for="date_of_birth">Date of birth: </label>
+    <input type="text" name="date_of_birth" id="date_of_birth"/><br/>
+
+    <label for="type">Type: </label>
+    <input type="text" name="type" id="type"/><br/>
+
+    <label for="affinity">Affinity: </label>
+    <select id="affinity" name="affinity">
+        <option value="fire">Fire</option>
+        <option value="grass">Grass</option>
+        <option value="water">Water</option>
+    </select><br/>
+
+    <label for="level">Level: </label>
+    <input type="number" min="1" max="100"><br/>
+
+    <label for="allergy">Allergies: </label>
+    <input type="text" name="allergy" id="allergy">
+
+    <h3>Owner Details</h3>
+
+    <label for="owner_first_name">First Name: </label>
+    <input type="text" name="owner_first_name id="owner_first_name><br/>
+
+    <label for="owner_last_name">Last Name: </label>
+    <input type="text" name="owner_last_name id="owner_last_name><br/>
+
+    <h3>Medical History</h3>
+
+    <label for="vet">Vet: </label>
+    <input type="text" name="vet" id="vet"><br/>
+    
+    <label for="notes">Medical notes: </label>
+    <textarea id="notes" rows="6" cols="30">
+    </textarea><br/>
+
+    <input type="submit" value="Register Pokemon"/>
 
 </form>
