@@ -10,8 +10,8 @@ get '/pokemon' do
     erb(:index)
 end
 
-# List of all owners
-get '/owners' do
-    @owners = Owner.all
-    erb(:owners)
-end
+# # List of all owners
+# get '/owners' do
+#     @owners = Owner.all
+#     erb(:owners)
+# end

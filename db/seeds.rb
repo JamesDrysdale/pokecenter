@@ -1,6 +1,7 @@
 require_relative('../models/pokemon')
 require_relative('../models/owners')
 
+
 # owner1 = Owner.new({
 #     'first_name' => 'Ash',
 #     'last_name' => 'Ketchum',

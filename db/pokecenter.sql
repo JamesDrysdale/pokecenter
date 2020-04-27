@@ -1,6 +1,6 @@
 DROP TABLE medical_records;
 DROP TABLE pokemon;
-DROP TABLE owners;
+-- DROP TABLE owners;
 DROP TABLE vet;
 
 
@@ -34,7 +34,8 @@ CREATE TABLE pokemon
     owner_last_name VARCHAR(255),
     phone VARCHAR(255),
     email VARCHAR(255) UNIQUE,
-    address TEXT
+    address TEXT,
+    
 );
 
 CREATE TABLE medical_records
