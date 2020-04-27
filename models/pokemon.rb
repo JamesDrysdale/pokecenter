@@ -111,10 +111,7 @@ class Pokemon
         return pokemon
     end
 
-    def owner()
-        owner = Owner.find(@owner_id)
-        return owner
-    end
+
 
 
 end
