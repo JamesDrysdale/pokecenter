@@ -20,7 +20,7 @@ class Pokemon
         @phone = options['phone']
         @email = options['email']
         @address = options['address']
-        @vet_id = options['vet_id']
+        @vet_id = options['vet_id'].to_i
         @notes = options['notes']
         
     end

@@ -29,15 +29,19 @@
     <h3>Owner Details</h3>
 
     <label for="owner_first_name">First Name: </label>
-    <input type="text" name="owner_first_name id="owner_first_name><br/>
+    <input type="text" name="owner_first_name" id="owner_first_name"><br/>
 
     <label for="owner_last_name">Last Name: </label>
-    <input type="text" name="owner_last_name id="owner_last_name><br/>
+    <input type="text" name="owner_last_name" id="owner_last_name"><br/>
 
     <h3>Medical History</h3>
 
-    <label for="vet">Vet: </label>
-    <input type="text" name="vet" id="vet"><br/>
+    <label for="vet_select">Select Vet: </label>
+    <select name="vet_id" id="vet_select">
+        <% @vets.each do |vet| %>
+            <option value=<%= vet.id %>><%= vet.name.capitalize %></option>
+        <% end %>
+    </select><br/>
     
     <label for="notes">Medical notes: </label>
     <textarea id="notes" rows="6" cols="30">
