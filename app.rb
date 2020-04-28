@@ -16,21 +16,18 @@ get '/pokemon/new' do
     erb(:new)
 end
 
-# new
-get '/pokemon/new' do
-    erb(:new)
-end
-
-
-
+#  new - duplicate
+# get '/pokemon/new' do
+#     erb(:new)
+# end
 
 # Create
 post '/pokemon' do
-    # p = params
-    # binding.pry
     Pokemon.new(params).save
     redirect to '/pokemon'
 end
+
+
 
 
 

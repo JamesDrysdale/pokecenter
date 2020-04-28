@@ -8,6 +8,10 @@ vet1 = Vet.new({
     'name' => 'Nurse Joy'
 })
 
+vet2 = Vet.new({
+    'name' => 'Nurse Sandy'
+})
+
 vet1.save
 
 # owner1 = Owner.new({
