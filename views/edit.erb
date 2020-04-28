@@ -1,0 +1,52 @@
+<h2>Edit Pokemon</h2>
+
+<form method="POST" action="/pokemon">
+
+    <h3>Pokemon Details</h3>
+
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" value="<%= @pokemon.name%>"/><br/>
+
+    <label for="date_of_birth">Date of birth: </label>
+    <input type="text" name="date_of_birth" id="date_of_birth" value="<%= @pokemon.date_of_birth%>"/><br/>
+
+    <label for="type">Type: </label>
+    <input type="text" name="type" id="type" value="<%= @pokemon.type%>" value="<%= @pokemon.type%>"/><br/>
+
+    <label for="affinity">Affinity: </label>
+    <select id="affinity" name="affinity">
+        <option value="fire">Fire</option>
+        <option value="grass">Grass</option>
+        <option value="water">Water</option>
+    </select><br/>
+
+    <label for="level">Level: </label>
+    <input type="number" min="1" max="100" value="<%= @pokemon.level%>"><br/>
+
+    <label for="allergy">Allergies: </label>
+    <input type="text" name="allergy" id="allergy" value="<%= @pokemon.allergy%>">
+
+    <h3>Owner Details</h3>
+
+    <label for="owner_first_name">First Name: </label>
+    <input type="text" name="owner_first_name" id="owner_first_name" value="<%= @pokemon.owner_first_name%>"><br/>
+
+    <label for="owner_last_name">Last Name: </label>
+    <input type="text" name="owner_last_name" id="owner_last_name" value="<%= @pokemon.owner_last_name%>"><br/>
+
+    <h3>Medical History</h3>
+
+    <label for="vet_select">Select Vet: </label>
+    <select name="vet_id" id="vet_select">
+        <% @vets.each do |vet| %>
+            <option value=<%= vet.id %>><%= vet.name.capitalize %></option>
+        <% end %>
+    </select><br/>
+    
+    <label for="notes">Medical notes: </label>
+    <textarea id="notes" rows="6" cols="30"><%= @pokemon.notes %>
+    </textarea><br/>
+
+    <input type="submit" value="Register Pokemon"/>
+
+</form>

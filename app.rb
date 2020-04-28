@@ -27,8 +27,28 @@ post '/pokemon' do
     redirect to '/pokemon'
 end
 
+get '/pokemon/:id' do
+    @pokemon = Pokemon.find(params['id'])
+    erb(:show)
+end 
 
-
+get '/pokemon/:id/edit' do
+    @vets = Vet.all
+    @pokemon = Pokemon.find(params['id'])
+    erb(:edit)
+  end
+  
+  post '/pokemon/:id' do
+    pokemon = Pokemon.new(params)
+    pokemon.update()
+    redirect to "/pokemon/#{params['id']}"
+  end
+  
+  post '/pokemon/:id/delete' do
+    pokemon = Pokemon.find(params['id'])
+    pokemon.delete
+    redirect to '/pokemon'
+  end
 
 
 

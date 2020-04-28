@@ -9,7 +9,7 @@
     <p>Affinity: <%= pokemon.affinity %></p>
     <p>Level: <%= pokemon.level %></p>
     
-    <hr />
+    
 <% end %>
 
 <h3> Owner Data</h3>
@@ -27,3 +27,7 @@
     <p>Vet: <%= pokemon.vet_id %></p>
     <p>Medical Notes: <%= pokemon.notes %></p>
 <% end %>
+
+ <p><a href="/pokemon/<%=pokemon.id%>">Show Pokemon</a></p>
+ <p><a href="/pokemon/<%=pokemon.id%>/edit">Edit Pokemon</a></p>
+<hr />

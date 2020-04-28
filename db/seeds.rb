@@ -13,6 +13,7 @@ vet2 = Vet.new({
 })
 
 vet1.save
+vet2.save
 
 # owner1 = Owner.new({
 #     'first_name' => 'Ash',

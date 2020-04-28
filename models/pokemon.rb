@@ -103,7 +103,7 @@ class Pokemon
     end
         
     def self.find(id)
-        sql = "SELECT from pokemon
+        sql = "SELECT * from pokemon
         WHERE id = $1"
         values = [id]
         result = SqlRunner.run(sql, values).first
