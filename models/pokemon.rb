@@ -72,15 +72,14 @@ class Pokemon
             address,
             vet_id,
             notes
-        )
-        VALUES
+        ) =
         (
             $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13
         )
         WHERE id = $14"
         values = [@name, @date_of_birth, @type, @allergy, @affinity, 
         @level, @owner_first_name, @owner_last_name, @phone, @email, 
-        @address, @vet_id, @notes]
+        @address, @vet_id, @notes, @id]
         SqlRunner.run(sql, values)
     end
 

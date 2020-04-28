@@ -28,6 +28,8 @@
     <p>Medical Notes: <%= pokemon.notes %></p>
 <% end %>
 
- <p><a href="/pokemon/<%=pokemon.id%>">Show Pokemon</a></p>
- <p><a href="/pokemon/<%=pokemon.id%>/edit">Edit Pokemon</a></p>
+<p><a href="/pokemon/<%=pokemon.id%>">Show Pokemon</a></p>
+<p><a href="/pokemon/<%=pokemon.id%>/edit">Edit Pokemon</a></p>
+<form method="post" action="/pokemon/<%= pokemon.id %>/delete"><input type="submit" value="Delete"/>
+
 <hr />

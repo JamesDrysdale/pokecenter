@@ -1,6 +1,6 @@
-<h2>Edit Pokemon</h2>
+<h2>Edit <%= @pokemon.name.capitalize%></h2>
 
-<form method="POST" action="/pokemon">
+<form method="POST" action="/pokemon/<%= @pokemon.id%>">
 
     <h3>Pokemon Details</h3>
 
@@ -14,11 +14,7 @@
     <input type="text" name="type" id="type" value="<%= @pokemon.type%>" value="<%= @pokemon.type%>"/><br/>
 
     <label for="affinity">Affinity: </label>
-    <select id="affinity" name="affinity">
-        <option value="fire">Fire</option>
-        <option value="grass">Grass</option>
-        <option value="water">Water</option>
-    </select><br/>
+    <input type="text" name="affinity" id="affinity" value="<%= @pokemon.affinity%>" value="<%= @pokemon.affinity%>"/><br/>
 
     <label for="level">Level: </label>
     <input type="number" min="1" max="100" value="<%= @pokemon.level%>"><br/>
@@ -47,6 +43,6 @@
     <textarea id="notes" rows="6" cols="30"><%= @pokemon.notes %>
     </textarea><br/>
 
-    <input type="submit" value="Register Pokemon"/>
+    <input type="submit" value="Edit Pokemon"/>
 
 </form>
