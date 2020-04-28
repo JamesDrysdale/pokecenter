@@ -11,6 +11,11 @@ get '/pokemon' do
     erb(:index)
 end
 
+get '/vets' do
+    @vets = Vet.all
+    erb(:vets)
+end
+
 get '/pokemon/new' do
     @vets = Vet.all
     erb(:new)
