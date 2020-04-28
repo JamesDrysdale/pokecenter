@@ -15,6 +15,15 @@ get '/pokemon/new' do
     erb(:new)
 end
 
+# Show
+
+
+# Create
+post '/pokemon' do
+    @pokemon = Pokemon.new(params).save
+    redirect to '/pokemon'
+end
+
 
 
 
