@@ -22,13 +22,39 @@ nav li {
     display: inline;
     float: right;
     position: relative;
-    bottom: 70px;
+    bottom: 60px;
     right: 20px;
-    padding: 15px ;
+    padding: 10px ;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 1em;
 }
+
+/*  CONTENT STYLING */
+
+body {
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+h2, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h2 {
+    color: red;
+}
+
+
+#pokemon-item {
+    display: inline-block;
+    border-top: 1px dashed red;
+    background-color: rgb(249, 229, 127);
+    margin: 10px;
+    padding: 10px;
+}
+
+
