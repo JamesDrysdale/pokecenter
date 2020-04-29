@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/contrib/all')
 require_relative('models/pokemon')
-require_relative('models/vets')
+require_relative('controllers/vets_controller.rb')
 also_reload('/models/*')
 require('pry')
 
@@ -11,10 +11,7 @@ get '/pokemon' do
     erb(:index)
 end
 
-get '/vets' do
-    @vets = Vet.all
-    erb(:vets)
-end
+
 
 get '/pokemon/new' do
     @vets = Vet.all
@@ -55,6 +52,7 @@ get '/pokemon/:id/edit' do
     redirect to '/pokemon'
   end
 
+  
 
 
 
