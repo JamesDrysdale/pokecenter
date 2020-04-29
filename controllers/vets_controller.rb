@@ -39,7 +39,7 @@ get '/vets/:id/edit_vet' do
   end
   
   post '/vets/:id/delete' do
-    pokemon = Pokemon.find(params['id'])
-    pokemon.delete
-    redirect to '/pokemon'
+    vet = Vet.find(params['id'])
+    vet.delete
+    redirect to '/vets'
   end

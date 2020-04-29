@@ -1,5 +1,5 @@
 <h2><%= @vets.name%></h2>
 
 <p><a href="/vets/<%=@vets.id%>/edit_vet">Edit Vet</a></p>
-<p><a href="#">Delete Vet</a></p>
 
+<form method="post" action="/vets/<%= @vets.id %>/delete"><input type="submit" value="Delete"/>
