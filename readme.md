@@ -5,13 +5,13 @@
 
     This particular project is themed around pokemon and our veterinary practice is a pokecenter. The animals it treats are pokemon.
 # Running instructions:
-##### Required:
-#### Postico
-#### Sinatra
-#### Sinatra Contrib all
-#### Ruby Gems:
-###   pg
-###   pry
+## Required:
+### Postico
+### Sinatra
+### Sinatra Contrib all
+### Ruby Gems:
+####   pg
+####  pry
 ##### In Termninal
     cd to /Users/user/codeclan_work/week_04/pokecenter
     createdb pokecenter
