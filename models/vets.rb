@@ -54,4 +54,10 @@ class Vet
         return vet_data.map { |vet| Vet.new(vet) }
     end
 
+    def count_pets()
+        sql = "SELECT COUNT(*) FROM pokemon WHERE vet_id = $1;"
+        values = [@id]
+        return SqlRunner.run(sql, values)[0]["count"].to_i
+    end
+
 end

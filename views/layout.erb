@@ -1,21 +1,23 @@
-<DOCTYPE! html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Pokecenter Terminal</title>
-        <link rel="stylesheet" href="/style.css">
+        <link href="/style.css" rel="stylesheet">
     </head>
     <body>
         <nav id="nav-bar">
+            <h1>Pokecenter Terminal</h1>
+            <img id="nav-icon" src="/pokecenter.png" />
             <ul>
-                <li><a href="/pokemon">Pokemon Register</a></li>
-                <li><a href="pokemon/new">Add new Pokemon</a></li>
-                <li><a href="/vets">Vet Register</a></li>
-                <li><a href="/vets/new">Add new vet</a></li>
+                <li><a href="/vets/new">Add Vet</a></li>
+                <li><a href="/vets">All Vets</a></li>
+                <li><a href="pokemon/new">Add Pokemon</a></li>
+                <li><a href="/pokemon">All Pokemon</a></li>
             </ul>
-        <nav>
-        <h1>Pokecenter Terminal</h1>
+        </nav>
+        
         <%= yield %>
 
 
     </body>
-    </html>
+</html>

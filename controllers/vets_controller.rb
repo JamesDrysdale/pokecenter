@@ -37,9 +37,17 @@ get '/vets/:id/edit_vet' do
     vet.update
     redirect to "/vets/#{params['id']}"
   end
+
+  get '/warning' do
+    erb(:warning)
+  end
   
   post '/vets/:id/delete' do
     vet = Vet.find(params['id'])
-    vet.delete
-    redirect to '/vets'
+    if vet.count_pets > 0 
+      redirect to '/warning'
+    else
+      vet.delete
+      redirect to '/vets'
+    end
   end
