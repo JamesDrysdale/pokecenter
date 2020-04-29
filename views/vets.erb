@@ -3,6 +3,6 @@
 <% @vets.each do |vet| %>
 <p>Name: <%= vet.name  %> </p>
 
-<a href="#">Show Vet</a>
+<a href="/vets/<%=vet.id  %>">Show Vet</a><br />
 <hr />
 <% end %>

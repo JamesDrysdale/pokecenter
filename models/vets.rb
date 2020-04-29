@@ -31,8 +31,8 @@ class Vet
     def self.all()
         sql = "SELECT * FROM vets"
         vet_data = SqlRunner.run(sql)
-        vets = map_items(vet_data)
-        return vets
+        vet = map_items(vet_data)
+        return vet
     end
 
     def self.map_items(vet_data)
