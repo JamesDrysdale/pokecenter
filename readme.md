@@ -22,3 +22,7 @@
     to quit:
     close browser window
     control c in terminal
+
+![List of all pokemon](/public/All-Pokemon.png "List of Pokemon")
+
+![Add Pokemon form](/public/Add-Pokemon.png "Add Pokemon Form")
